@@ -1,7 +1,7 @@
 // onload jquery
 $(function() {
     ScrollReveal().reveal('.container', { delay: 500 , distance: '100px'});
-    ScrollReveal().reveal('.heading', { delay: 500 , distance: '100px', scale : 2, });
+    ScrollReveal().reveal('.heading', { delay: 500 , distance: '100px',  });
     ScrollReveal().reveal('.ag-courses_item', { delay: 500 , distance: '100px', });
     
     $('.round').click(function(){
