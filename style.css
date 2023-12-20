@@ -6,6 +6,17 @@ body {
   font-size: 130%;
   max-width: 100vw !important;
 }
+/* save all colors */
+:root {
+  --pink: #cd3091;
+  --green: #27ac32;
+  --lpink: #dfbfbf;
+  --color-5: #f9b234;
+  --color-6: #4c49ea;
+  --color-7: #48abe0;
+  --black: #121212;
+  --white : #fff;
+}
 
 .topnav {
   margin-top: 3%;
@@ -408,24 +419,41 @@ footer {
 
 }
 /* define vars */
-:root {
-  --speed: 1;
-  --delay: 0;
-  --clip: 100;
-  --origin: 50% 0%;
- 
 
-}
 
 .heading  {
   text-align: center;
-  font-size:  5rem;
+  font-size:  4.3rem;
   font-weight: 600;
-  
-    
+  /* add shadow and animate    */
+  text-shadow: 0 0 1px #cd3091, 0 0 1px #cd3091, 0 0 1px #cd3091, 0 0 1px #cd3091;
+  animation: animate 2s linear infinite ;
+
+}
+/* animate textshadow dont make it disppear just increase decrease intensity */
+@keyframes animate {
+  0% {
+    text-shadow: 0 0 1px #cd3091, 0 0 5px #cd3091, 0 0 5px #cd3091, 0 0 5px #cd3091;
+  }
+  25% {
+    text-shadow: 0 0 10px #cd3091, 0 0 10px #cd3091, 0 0 10px #cd3091, 0 0 10px #cd3091;
+  }
+  50% {
+    text-shadow: 0 0 20px #cd3091, 0 0 20px #cd3091, 0 0 20px #cd3091, 0 0 20px #cd3091;
+  }
+  75% {
+    text-shadow: 0 0 10px #cd3091, 0 0 10px #cd3091, 0 0 10px #cd3091, 0 0 10px #cd3091;
+  }
+  100% {
+    text-shadow: 0 0 1px #cd3091, 0 0 1px #cd3091, 0 0 1px #cd3091, 0 0 1px #cd3091;
+  }
 }
 
-.ag-courses_box {
+
+
+    
+
+    .ag-courses_box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -496,7 +524,7 @@ footer {
 .ag-courses-item_bg {
   height: 128px;
   width: 128px;
-  background-color: #f9b234;
+  background-color: var(--pink);
 
   z-index: 1;
   position: absolute;
@@ -510,7 +538,7 @@ footer {
   transition: all .5s ease;
 }
 .ag-courses_item:nth-child(2n) .ag-courses-item_bg {
-  background-color: #4c49ea;
+  background-color: var(--green);
 }
 
 .bottom {
@@ -519,7 +547,7 @@ footer {
 }
 
 button.round {
-  background-color: #48abe0;
+  background-color: var(--pink);
   color: white;
   border: none;
   padding: 3px;
@@ -532,7 +560,7 @@ button.round {
   box-shadow: 0 2px 4px darkslategray;
 }
 .round:hover{
-  background-color: #cd3091;
+  background-color: rgb(247, 97, 122);
   cursor: pointer;
   transition: 0.3s;
 }
