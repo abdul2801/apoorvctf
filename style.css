@@ -457,7 +457,7 @@ footer {
 /* skew ag-courses_item on hover and animate*/
 .ag-courses_item:hover {
 
-  transform: skewX(-35deg);
+  transform: skewX(-15deg);
   box-shadow:
   0 0 10px var(--pink),
   0 0 20px var(--pink),
@@ -498,6 +498,9 @@ footer {
   text-decoration: none;
   color: #FFF;
 }
+.ag-courses-item:hover .ag-courses-item_title {
+  transform: skewX(-30deg);
+}
 /* .ag-courses-item_link:hover .ag-courses-item_bg {
   -webkit-transform: scale(25);
   -ms-transform: scale(25);
@@ -506,7 +509,6 @@ footer {
 .ag-courses-item_title {
   min-height: 87px;
   margin: 0 0 15px;
-  transform: skew(10deg);
   overflow: hidden;
   max-width: 85%;
   /* font-weight: bold; */
@@ -514,6 +516,7 @@ footer {
   z-index: 2;
   position: relative;
 }
+
 .ag-courses-item_date-box {
   font-size: 18px;
   color: #FFF;
