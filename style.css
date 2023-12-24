@@ -454,6 +454,12 @@ footer {
   overflow: hidden;
   transition: 0.3s;  
 }
+/* media query for small device */
+@media (max-width:480px)  {
+  .ag-courses_item {
+    margin: 0 10px 70px;
+  }
+}
 /* skew ag-courses_item on hover and animate*/
 .ag-courses_item:hover {
 
@@ -468,6 +474,7 @@ footer {
 }
 .ag-courses_item::before {
   content: '';
+  display: none;
   position: absolute;
   top: 0;
   left: -100px;
@@ -510,7 +517,8 @@ footer {
   min-height: 87px;
   margin: 0 0 15px;
   overflow: hidden;
-  max-width: 85%;
+  /* width: 100%; */
+  /* max-width: 85%; */
   /* font-weight: bold; */
 
   z-index: 2;
@@ -584,7 +592,7 @@ footer {
 }
 
 button.round {
-  background-color: var(--pink);
+  background-color: black;
   color: white;
   border: none;
   padding: 3px;
@@ -592,12 +600,66 @@ button.round {
   height: 5rem;
   width: 5rem;
   border-radius: 50%;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  transition: box-shadow 0.5s;
 
-  box-shadow: 0 2px 4px darkslategray;
+  box-shadow: 0 2px 10px var(--pink);
 }
 .round:hover{
-  background-color: rgb(247, 97, 122);
+  box-shadow: 0 2px 10px var(--green);
   cursor: pointer;
-  transition: 0.3s;
+}
+
+svg {
+  fill: rgba(165, 141, 141);
+  height: 2rem;
+  
+ }
+ 
+
+ @keyframes bounce {
+	0%, 100%, 20%, 50%, 80% {
+		-webkit-transform: translateY(0);
+		-ms-transform:     translateY(0);
+		transform:         translateY(0)
+	}
+	40% {
+		-webkit-transform: translateY(-30px);
+		-ms-transform:     translateY(-30px);
+		transform:         translateY(-30px)
+	}
+	60% {
+		-webkit-transform: translateY(-15px);
+		-ms-transform:     translateY(-15px);
+		transform:         translateY(-15px)
+	}
+}
+.round {  
+  top: 50%;
+  left: 50%;
+  height: 180px;
+  width: 180px;
+  background-color: red;  
+  border-radius: 50%;
+  line-height: 180px;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  /* animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite; */
+  color: white;
+}
+.round:hover {
+  cursor: pointer;
+  animation-name: bounce;
+  -moz-animation-name: bounce;
 }
